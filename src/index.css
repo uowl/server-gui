@@ -62,13 +62,9 @@
 
 [data-theme='oled'] {
   --primary: #ffffff;
-  /* Pure White */
   --secondary: #a1a1aa;
-  /* Cool Grey */
   --accent: #111111;
-  /* Deep Charcoal */
   --background: #000000;
-  /* True Black */
   --surface: rgba(255, 255, 255, 0.05);
   --glass: rgba(255, 255, 255, 0.02);
   --glass-border: rgba(255, 255, 255, 0.12);
@@ -76,6 +72,14 @@
   --text-muted: #71717a;
   --shadow: rgba(0, 0, 0, 0);
   --on-primary: black;
+}
+
+[data-theme='oled'] body {
+  background-image: none;
+}
+
+[data-theme='oled'] .bg-blob {
+  display: none;
 }
 
 [data-theme='apple'] {
