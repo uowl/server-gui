@@ -26,19 +26,19 @@ const Weather = () => {
                     <p style={{ color: 'var(--primary)', fontWeight: '500' }}>{weatherData.condition}</p>
                 </div>
                 <div style={{ color: 'var(--primary)' }}>
-                    <Sun size={80} strokeWidth={1} style={{ filter: 'drop-shadow(0 0 10px rgba(var(--primary-rgb), 0.3))' }} />
+                    <Sun size={80} strokeWidth={1} />
                 </div>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '32px' }}>
-                <div style={{ background: 'rgba(255,255,255,0.1)', padding: '16px', borderRadius: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ background: 'var(--glass)', padding: '16px', borderRadius: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <Droplets size={24} color="var(--secondary)" />
                     <div>
                         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Humidity</p>
                         <p style={{ fontWeight: '600' }}>{weatherData.humidity}%</p>
                     </div>
                 </div>
-                <div style={{ background: 'rgba(255,255,255,0.1)', padding: '16px', borderRadius: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ background: 'var(--glass)', padding: '16px', borderRadius: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <Wind size={24} color="var(--secondary)" />
                     <div>
                         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Wind Speed</p>

@@ -55,7 +55,7 @@ const Todo = () => {
                     placeholder="Add a new task..."
                     style={{
                         flex: 1,
-                        background: 'rgba(255, 255, 255, 0.1)',
+                        background: 'var(--glass)',
                         border: '1px solid var(--glass-border)',
                         borderRadius: '12px',
                         padding: '12px 16px',
@@ -100,7 +100,7 @@ const Todo = () => {
                                 alignItems: 'center',
                                 gap: '12px',
                                 padding: '12px',
-                                background: task.completed ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.1)',
+                                background: task.completed ? 'var(--background)' : 'var(--glass)',
                                 borderRadius: '12px',
                                 marginBottom: '10px',
                                 transition: 'all 0.3s ease',

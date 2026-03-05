@@ -55,7 +55,7 @@ const SettingsApp = () => {
                                 borderRadius: '16px',
                                 border: '2px solid',
                                 borderColor: currentTheme === theme.id ? 'var(--primary)' : 'var(--glass-border)',
-                                background: currentTheme === theme.id ? 'var(--glass)' : 'rgba(255,255,255,0.1)',
+                                background: currentTheme === theme.id ? 'var(--glass)' : 'var(--surface)',
                                 cursor: 'pointer',
                                 transition: 'all 0.2s ease',
                                 textAlign: 'left',
@@ -65,7 +65,7 @@ const SettingsApp = () => {
                             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                                 <div style={{ display: 'flex', gap: '4px' }}>
                                     {theme.colors.map((c, i) => (
-                                        <div key={i} style={{ width: '12px', height: '12px', borderRadius: '50%', background: c, border: '1px solid rgba(255,255,255,0.2)' }} />
+                                        <div key={i} style={{ width: '12px', height: '12px', borderRadius: '50%', background: c, border: `1px solid var(--glass-border)` }} />
                                     ))}
                                 </div>
                                 <span style={{ fontWeight: '600', color: 'var(--text)' }}>{theme.name}</span>
