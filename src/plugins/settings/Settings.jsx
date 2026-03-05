@@ -7,7 +7,8 @@ const themes = [
     { id: 'ocean', name: 'Ocean Teal', colors: ['#0891b2', '#ecfeff', '#0d9488'] },
     { id: 'royal', name: 'Royal Midnight', colors: ['#800020', '#000033', '#4169E1'] },
     { id: 'oled', name: 'OLED Pure Black', colors: ['#ffffff', '#000000', '#a1a1aa'] },
-    { id: 'sepia', name: 'Sepia (E-ink)', colors: ['#5d4037', '#f4ecd8', '#795548'] }
+    { id: 'sepia', name: 'Sepia (E-ink)', colors: ['#5d4037', '#f4ecd8', '#795548'] },
+    { id: 'apple', name: 'Crystal (Apple)', colors: ['#007AFF', '#ffffff', '#5856D6'] }
 ];
 
 const SettingsApp = () => {

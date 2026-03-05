@@ -16,6 +16,11 @@ function App() {
 
   return (
     <div className="app-container">
+      <div className="bg-blobs">
+        <div className="bg-blob blob-1"></div>
+        <div className="bg-blob blob-2"></div>
+        <div className="bg-blob blob-3"></div>
+      </div>
       <nav className="sidebar">
         <div className="logo" style={{ marginBottom: '24px', color: 'var(--primary)' }}>
           <Package size={32} />

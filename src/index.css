@@ -78,6 +78,23 @@
   --on-primary: black;
 }
 
+[data-theme='apple'] {
+  --primary: #007AFF;
+  /* Apple Blue */
+  --secondary: #FF2D55;
+  /* Apple Pink */
+  --accent: #AF52DE;
+  /* Apple Purple */
+  --background: #fbfbfb;
+  --surface: rgba(255, 255, 255, 0.4);
+  --glass: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --text: #1d1d1f;
+  --text-muted: #86868b;
+  --shadow: rgba(0, 0, 0, 0.04);
+  --on-primary: white;
+}
+
 [data-theme='sepia'] {
   --primary: #5d4037;
   /* Warm Brown */
@@ -120,6 +137,62 @@ body {
   transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), background-image 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.bg-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  transition: all 1s ease;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: var(--primary);
+  top: -200px;
+  right: -100px;
+  animation: float 25s infinite alternate;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--secondary);
+  bottom: -150px;
+  left: -50px;
+  animation: float 20s infinite alternate-reverse;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent);
+  top: 40%;
+  left: 30%;
+  animation: float 30s infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(100px, 50px) scale(1.1);
+  }
+}
+
 #root {
   height: 100%;
 }
@@ -134,7 +207,8 @@ body {
 .sidebar {
   width: 80px;
   background: var(--surface);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
   border-right: 1px solid var(--glass-border);
   display: flex;
   flex-direction: column;
@@ -187,7 +261,8 @@ body {
 
 .glass-card {
   background: var(--surface);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
   border: 1px solid var(--glass-border);
   border-radius: 28px;
   padding: 32px;
